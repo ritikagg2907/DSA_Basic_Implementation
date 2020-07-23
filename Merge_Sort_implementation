@@ -1,0 +1,45 @@
+package Labs;
+import java .util.*;
+import java.io.*;
+
+public class MergeSort{
+
+	static int tempMer[];
+	static int a[];
+	static int len;
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		int t= scn.nextInt();
+		for(int i=0;i<t;i++) {
+			int arr[] = new int[3];
+			for(int j=0;j<3;j++) {
+				arr[j] = scn.nextInt();
+			}
+			int a=0,c=0,b=0;
+			int l = arr[0];
+			int r = arr[1];
+			int m = arr[2];
+			if(m%2==1 && r-l>=1 && m>l) {
+				b = r;
+				c= r-1;
+			}
+			if(m==l || m==r) {
+				if(l%2==0) {
+					a = l;
+				}
+				else {
+					a=l+1;
+				}
+				System.out.println(a+ " " + m+ " "+ m);
+			}
+			if(m<l && m%2==1) {
+				if(l%2 == 0) {	
+					a=l;
+				}
+				else {
+					a=l+1;
+				}	
+			}	
+			System.out.println(a + " " + b + " " +c);
+		}}
+}
