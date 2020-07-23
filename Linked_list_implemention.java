@@ -7,6 +7,7 @@ class node{
 	int data;
 	node next;
 }
+
 class Linked{
 	node head;
 	public void add(int n) {
